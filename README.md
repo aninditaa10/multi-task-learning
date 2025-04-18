@@ -15,7 +15,7 @@ This code is fully containerized using Docker and tested in GitHub Codespaces.
 - 🔗 **Shared Transformer Encoder**: Utilizes `all-MiniLM-L6-v2` for generating sentence embeddings.
 - 🔀 **Task-Specific Heads**: Two independent classification heads for Task A and Task B.
 - 🧠 **Transfer Learning Ready**: Freezes base layers (0 to 3), fine-tunes task heads, final and final-1 layers (i.e. 4 and 5).
-- 🐳 **Docker Compatible**: Easily deployable and reproducible in containerized environments.
+- 🐳 **Docker**: Easily deployable and reproducible in containerized environments.
 
 ---
 
@@ -35,9 +35,9 @@ This code is fully containerized using Docker and tested in GitHub Codespaces.
 ### ➤ In GitHub Codespaces or any Docker-enabled terminal:
 
 ```bash
-# Build Docker image (note: tag must be lowercase)
-docker build -t mlt_task .
+# Build Docker image with the file path
+docker build -t multitask_1 /workspaces/multi-task-learning 
 
-# Run container
-docker run --rm mlt_task
+# Run 
+docker run --rm multitask_1
 ```
